@@ -1,0 +1,9 @@
+{% extends 'index.html' %} {% block title %} Post Page {% endblock %} {% block content %}
+<h2>This a Post Page</h2>
+{% for post in posts %}
+<ul>
+    <h2>{{ post.title }}</h2>
+    <br> {{ post.message }}
+</ul>
+{% endfor %}
+<a href="{% url 'index' %}">Home Page</a>{% endblock content %}
